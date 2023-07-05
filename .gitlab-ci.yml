@@ -1,0 +1,16 @@
+image: adoptopenjdk/openjdk17
+
+stages:
+  - build
+  - test
+
+before_script:
+  - chmod +x mvnw
+
+build:
+  stage: build
+  script: ./mvnw package -DskipTests
+
+testing:
+  stage: test
+  script: ./mvnw test

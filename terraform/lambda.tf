@@ -6,11 +6,6 @@ resource "aws_s3_bucket" "b" {
   bucket = "lambda-demo-songpon"
 }
 
-resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.b.id
-  acl    = "private"
-}
-
 resource "aws_s3_object" "object" {
   bucket = aws_s3_bucket.b.id
   key    = "lambda-demo.jar"

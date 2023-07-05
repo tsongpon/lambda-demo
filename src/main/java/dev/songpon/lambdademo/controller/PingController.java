@@ -10,11 +10,11 @@ public class PingController {
 
     @GetMapping("/ping")
     public String ping() {
-        return "pong";
+        return "pong...";
     }
 
     @GetMapping("/person")
     public Mono<Person> getPerson() {
-        return Mono.just(new Person("Songpon", "Imyen"));
+        return Mono.just(new Person("Songpon tum", "Imyen"));
     }
 }
